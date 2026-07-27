@@ -56,7 +56,7 @@ const ProductCard = ({ data }) => {
         {/* View Button */}
         <Link
             href={`/product/${data.id}`}
-            className="mt-6 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-800 py-3 font-semibold text-white transition-all duration-300 hover:from-blue-700 hover:to-indigo-700"
+            className="mt-6 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-800 py-3 font-semibold text-white transition-all duration-300 hover:from-indigo-800 hover:to-blue-600"
         >
             View Product →
         </Link>
