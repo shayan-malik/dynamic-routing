@@ -14,7 +14,7 @@ const Header = () => {
         </Link>
 
         {/* Navigation */}
-        <nav>
+        <nav className="hidden sm:block">
           <ul className="flex items-center gap-8 text-gray-300">
 
             <li>
@@ -54,6 +54,9 @@ const Header = () => {
             </li>
 
           </ul>
+          <div className="sm:hidden block">
+            ☰
+          </div>
         </nav>
 
       </div>
