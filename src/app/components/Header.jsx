@@ -1,24 +1,64 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 const Header = () => {
   return (
-    <>
-        <header className='flex justify-between items-center py-5 px-8 shadow-sm shadow-gray-500'>
-            <div className="">
-                <h1 className='text-2xl font-bold'>Products</h1>
-            </div>
-            <nav>
-                <ul className='flex gap-5'>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/about">About</Link></li>
-                    <li><Link href="/services">Services</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
-                </ul>
-            </nav>
-        </header>
-    </>
-  )
-}
+    <header className="sticky top-0 z-50 border-b border-zinc-700 bg-zinc-950/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5">
 
-export default Header
+        {/* Logo */}
+        <Link href="/">
+          <h1 className="cursor-pointer text-3xl font-extrabold tracking-wide text-yellow-600 transition hover:text-yellow-700">
+            Products
+          </h1>
+        </Link>
+
+        {/* Navigation */}
+        <nav>
+          <ul className="flex items-center gap-8 text-gray-300">
+
+            <li>
+              <Link
+                href="/"
+                className="transition hover:text-yellow-400"
+              >
+                Home
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/about"
+                className="transition hover:text-yellow-400"
+              >
+                About
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/services"
+                className="transition hover:text-yellow-400"
+              >
+                Services
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/contact"
+                className="transition hover:text-yellow-400"
+              >
+                Contact
+              </Link>
+            </li>
+
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+  );
+};
+
+export default Header;

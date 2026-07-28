@@ -3,7 +3,9 @@ import React from 'react'
 const page = () => {
   return (
     <>
-        <h1 className='p-8'>Services Page</h1>
+        <div className="flex h-screen justify-center items-center">
+        <h1 className="text-3xl">Services Page</h1>
+        </div>
     </>
   )
 }
