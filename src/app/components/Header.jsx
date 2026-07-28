@@ -1,7 +1,12 @@
+"use client"
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+
+  const pathname = usePathname()
+
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-700 bg-zinc-950/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5">
@@ -20,7 +25,11 @@ const Header = () => {
             <li>
               <Link
                 href="/"
-                className="transition hover:text-yellow-400"
+                className={`transition ${
+                  pathname === "/"
+                  ? "text-yellow-400 font-semibold border-b-2 p-2 transition-all ease-in-out duration-200"
+                  : "text-gray-300 hover:text-yellow-400"
+                } `}
               >
                 Home
               </Link>
@@ -29,7 +38,11 @@ const Header = () => {
             <li>
               <Link
                 href="/about"
-                className="transition hover:text-yellow-400"
+                className={`transition ${
+                  pathname === "/about"
+                  ? "text-yellow-400 font-semibold border-b-2 p-2 transition-all ease-in-out duration-200"
+                  : "text-gray-300 hover:text-yellow-400"
+                } `}
               >
                 About
               </Link>
@@ -38,7 +51,10 @@ const Header = () => {
             <li>
               <Link
                 href="/services"
-                className="transition hover:text-yellow-400"
+                className={`${pathname === "/services"
+                  ? "text-yellow-400 font-semibold border-b-2 p-2 transition-all ease-in-out duration-200"
+                  : "text-gray-300 hover:text-yellow--400"
+                }`}
               >
                 Services
               </Link>
@@ -47,7 +63,10 @@ const Header = () => {
             <li>
               <Link
                 href="/contact"
-                className="transition hover:text-yellow-400"
+                className={`${pathname === "/contact"
+                  ? "text-yellow-400 font-semibold border-b-2 p-2 transition-all ease-in-out duration-200"
+                  : "text-gray-300 hover:text-yellow-400"
+                }`}
               >
                 Contact
               </Link>
