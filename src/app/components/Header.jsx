@@ -54,10 +54,10 @@ const Header = () => {
             </li>
 
           </ul>
-          <div className="sm:hidden block">
+        </nav>
+          <div className="sm:hidden block text-2xl">
             ☰
           </div>
-        </nav>
 
       </div>
     </header>
